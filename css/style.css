@@ -29,19 +29,30 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    grid-template-rows: auto auto;
+    gap: 1rem;
     background-color: var(--umich-blue);
     color: var(--text-light);
     padding: 1rem;
-    gap: 1rem;
 }
 
-header img {
-    text-align: left;
+.header-top {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 5%;
+}
+
+.header-top img {
     width: 7.5rem;
     height: auto;
-    margin-left: 1rem;
+}
+
+.header-top h1 {
+    font-size: 2.2rem;
+    color: var(--umich-maize);
+    text-align: left;
 }
 
 .skip a {
@@ -62,9 +73,9 @@ header img {
 
 nav {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 1rem 5%;
     background-color: var(--umich-blue);
     text-align: center;
 }
