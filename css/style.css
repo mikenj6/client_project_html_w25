@@ -1,0 +1,217 @@
+
+nav a:hover{
+    text-decoration: underline;
+}
+nav a:focus{
+    text-decoration: underline;
+}
+
+
+
+*:focus{
+    border: 2px solid;
+}
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ensure viewport zoom is NOT disabled */
+meta[name="viewport"] {
+    content: "width=device-width, initial-scale=1.0, user-scalable=yes";
+}
+
+/* MICHIGAN THEME COLORS */
+:root {
+    --umich-blue: #00274C;
+    --umich-maize: #FFCB05;
+    --text-light: #FFFFFF;
+    --text-dark: #222222;
+    --background-offwhite: #F8F9FA; /* New off-white background */
+}
+
+/* BODY */
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    background-color: var(--background-offwhite);
+    color: var(--text-dark);
+    padding: 5%;
+}
+
+/* HEADER - Align Logo Left */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: var(--umich-blue);
+    color: var(--text-light);
+    padding: 1rem;
+}
+
+/* Logo aligned left */
+header img {
+    text-align: left;
+    margin-left: 15px;
+    width: 120px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+/* Skip link (for accessibility) */
+.skip a {
+    position: absolute;
+    top: -36px;
+    left: 0;
+    background: var(--umich-maize);
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip a:focus {
+    top: 10px;
+    left: 20px;
+}
+
+/* NAVIGATION - Grid-based menu */
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: var(--umich-blue);
+    text-align: center;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 1rem;
+}
+
+/* Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--umich-maize);
+    display: block;
+    padding: 0.5rem;
+}
+.current.page a {
+    color: white; /* Forces white text */
+    font-weight: bold;
+}
+
+/* ACTIVE PAGE STYLING */
+nav ul li.active a {
+    background-color: var(--umich-maize);
+    color: var(--umich-blue);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Focus Indicator */
+nav ul li a:focus {
+    outline: 3px solid var(--umich-maize);
+}
+
+/* MAIN CONTENT - GRID LAYOUT */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--umich-maize);
+    text-align: left;
+    margin-left: 15px;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--umich-blue);
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 2rem;
+}
+
+/* Images */
+main img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid var(--umich-blue);
+    
+}
+
+/* BUTTONS */
+button {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--umich-maize);
+    color: var(--umich-blue);
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 3px solid var(--umich-blue);
+}
+
+/* ARTICLES */
+article {
+    border-left: 5px solid var(--umich-blue);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f8f8f8;
+}
+
+/* FOOTER - Consistent across all pages */
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: var(--umich-blue);
+    color: var(--text-light);
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: var(--umich-maize);
+    text-decoration: none;
+    font-weight: bold;
+}
