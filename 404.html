@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="skip"><a href = "#main">Skip to Main Content</a></div>
+  <button id="darkModeToggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Page Not Found | UMich Site</title>
@@ -20,14 +22,13 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href = "food_pantry.html">Food Pantry</a></li>
+      <li><a href = "first_gen.html">First Gen</a></li>
+      <li><a href = "caps.html">CAPS</a></li>
     </ul>
   </nav>
 
-  <main>
+  <main id="main">
     <section class="error-container">
       <h1>404</h1>
       <p>The page you're looking for doesn’t exist or was moved.</p>
@@ -36,7 +37,10 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> University of Michigan Site</p>
+    <p> <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">University of Michigan Site</a> &copy; <span id="currentYear"></span></p>
+        <script>
+            document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+        </script>
   </footer>
 
   <!-- Dark Mode Toggle Script -->
@@ -54,3 +58,8 @@
 
     // Set current year
     document.getElement
+  </script>
+      
+    </body>
+    </html>
+    
