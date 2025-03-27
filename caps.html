@@ -10,11 +10,16 @@
 <body>
 
     <header>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
         <div class="skip"><a href = "#main">Skip to Main Content</a></div>
             <div class="header-top">
+                
                 <img src="images/caps1.png" alt="Caps Logo">
+                
                 <h1>CAPS</h1>
+                
             </div>
+            
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -24,7 +29,7 @@
             </ul>
         </nav>
         
-
+        
     </header>
     <main>
        
@@ -78,10 +83,33 @@
         </div>
     </main>
     <footer>
-        <p>CAPS | <a href="https://caps.umich.edu/">UM CAPS </a></p>
-    </footer>
+        <p>CAPS | <a href="https://caps.umich.edu/">UM CAPS </a> | &copy; <span id="currentYear"></span></p>
+        <script>
+            document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+        </script>
+        </footer>
       <!-- Content taken & modified from UMGPT with prompt "generate website with subheadings for caps site" 
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
+
+        <script>
+            const toggle = document.getElementById('darkModeToggle');
+          
+            // Check localStorage on page load
+            if (localStorage.getItem('dark-mode') === 'enabled') {
+              document.body.classList.add('dark-mode');
+            }
+          
+            toggle.addEventListener('click', () => {
+              document.body.classList.toggle('dark-mode');
+              
+              // Save preference
+              if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+              } else {
+                localStorage.setItem('dark-mode', 'disabled');
+              }
+            });
+          </script>
 </body>
 
 </html>

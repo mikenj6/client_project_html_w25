@@ -202,3 +202,119 @@ footer a {
     text-decoration: none;
     font-weight: bold;
 }
+
+body.dark-mode {
+    --umich-blue: #FFCB05;
+    --umich-maize: #00274C;
+    --text-light: #222222;
+    --text-dark: #FFFFFF;
+    --background-offwhite: #1c1c1c;
+}
+
+body.dark-mode article {
+    background-color: #000000; 
+    border-left: 0.313rem solid var(--umich-maize); 
+    color: var(--text-dark);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 3% 10%;
+        grid-template-rows: auto auto 1fr auto;
+        font-size: 1.1rem;
+        display: grid;
+    }
+
+    header {
+        grid-template-rows: 1fr;
+        padding: 2rem 0;
+    }
+
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+    .header-top img {
+        width: 12rem;
+    }
+
+    .header-top h1 {
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+
+    nav {
+        padding: 1rem 0;
+        background-color: var(--umich-blue);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    nav ul li {
+        padding: 0.75rem 1.5rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        transform: scale(1.1);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 4rem;
+        padding-top: 3rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        max-width: 85%;
+    }
+
+    .multi-column-layout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    article {
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 8px 16px rgba(0, 39, 76, 0.15);
+        transition: transform 0.3s ease;
+    }
+
+    article:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 39, 76, 0.25);
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2.5rem 10%;
+        text-align: left;
+        font-size: 1rem;
+        align-items: center;
+    }
+
+}

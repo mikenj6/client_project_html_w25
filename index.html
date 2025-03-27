@@ -10,6 +10,7 @@
 <body>
 
     <header>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
         <div class="skip"><a href = "#main">Skip to Main Content</a></div>
         <div class="header-top">
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
@@ -100,7 +101,30 @@
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a> &copy; <span id="currentYear"></span></p>
+        <script>
+            document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+      
+        // Check localStorage on page load
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+          document.body.classList.add('dark-mode');
+        }
+      
+        toggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          
+          // Save preference
+          if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+          } else {
+            localStorage.setItem('dark-mode', 'disabled');
+          }
+        });
+      </script>
+      
 </body>
 </html>
