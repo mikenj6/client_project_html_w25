@@ -49,6 +49,10 @@ header {
     height: auto;
 }
 
+.error-container h1{
+    color: var(--text-dark);
+}
+
 .header-top h1 {
     font-size: 2.2rem;
     color: var(--umich-maize);
@@ -216,6 +220,7 @@ body.dark-mode article {
     border-left: 0.313rem solid var(--umich-maize); 
     color: var(--text-dark);
 }
+
 
 @media screen and (min-width: 768px) {
     body {
