@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | UMich Site</title>
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <img src="your-logo.png" alt="UMich Logo">
+      <h1>Oops! Page Not Found</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="error-container">
+      <h1>404</h1>
+      <p>The page you're looking for doesn’t exist or was moved.</p>
+      <a href="index.html">Back to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> University of Michigan Site</p>
+  </footer>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+    }
+    toggle?.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('dark-mode',
+        document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled'
+      );
+    });
+
+    // Set current year
+    document.getElement
